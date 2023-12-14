@@ -11,8 +11,8 @@ const LandingPage = () => {
         <>
             {/* Desktop View */}
 
-            <div className='hidden lg:flex w-1/4 h-[100vh] flex flex-col justify-end border-r border-black gap-48 2xl:gap-16'>
-                <div className='flex flex-col justify-center items-start p-8 2xl:p-16 gap-8 '>
+            <div className='hover:cursor-crosshair hidden lg:flex w-1/4 h-[100vh] flex flex-col justify-end border-r border-black gap-48 2xl:gap-16'>
+                <div className='flex flex-col justify-center items-start p-8 2xl:p-16 gap-8 selection:bg-black selection:text-white'>
                     <p className='text-3xl 2xl:text-6xl tracking-widest uppercase'>Ilham</p>
 
                     <p className='text-3xl 2xl:text-6xl tracking-widest uppercase'>Soejud</p>
@@ -22,14 +22,14 @@ const LandingPage = () => {
                     <img src={Image} className='grayscale w-24 2xl:w-32' alt="" />
                 </div>
             </div>
-            <div className='hidden lg:block w-3/4 h-full '>
-                <div className='w-full h-[30vh] flex pl-32 items-center'>
+            <div className='hidden lg:block w-3/4 h-full selection:bg-black selection:text-white'>
+                <div className='w-full h-[30vh] flex pl-32 items-center hover:cursor-crosshair'>
                     <p className='text-3xl 2xl:text-6xl tracking-[.35em] font-light'>PROJECTS</p>
                 </div>
-                <div className='w-full h-[30vh] flex pl-32 items-center border-t border-b border-black'>
+                <div className='w-full h-[30vh] flex pl-32 items-center border-t border-b border-black hover:cursor-crosshair'>
                     <p className='text-3xl 2xl:text-6xl tracking-[.35em]'>INTERNSHIPS</p>
                 </div>
-                <div className='w-full h-[30vh] flex pl-32 items-center'>
+                <div className='w-full h-[30vh] flex pl-32 items-center hover:cursor-crosshair '>
                     <p className='text-3xl 2xl:text-6xl tracking-[.35em]'>EDUCATION</p>
                 </div>
                 <div className='w-full h-[10vh] flex pl-32  items-center border-t border-black gap-16'>
