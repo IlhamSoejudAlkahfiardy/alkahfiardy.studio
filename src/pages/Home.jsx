@@ -6,7 +6,7 @@ import LandingPage from '../components/LandingPage'
 const Home = () => {
     return (
         <Layout>
-            <div className='min-h-fit w-full flex'>
+            <div className=' w-full flex'>
 
                 <LandingPage />
 

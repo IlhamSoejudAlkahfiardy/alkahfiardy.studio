@@ -6,3 +6,8 @@
     font-family: 'Big Shoulders Stencil Text';
     src: url(./assets/fonts/BigShouldersStencilText-Regular.ttf);
   }
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(./assets/fonts/Poppins-Regular.ttf);
+  }

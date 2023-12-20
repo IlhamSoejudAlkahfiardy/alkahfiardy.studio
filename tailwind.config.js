@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         fontBigShouldersStencilText: ["Big Shoulders Stencil Text", "cursive"],
+        fontPoppins: ["Poppins"],
       },
     },
   },

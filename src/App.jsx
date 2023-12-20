@@ -6,6 +6,7 @@ import Education from "./pages/Education"
 import Project from "./pages/Project"
 import Internship from "./pages/Internship"
 import ContactMe from "./pages/ContactMe"
+import NotFound from "./components/NotFound"
 
 function App() {
 
@@ -18,7 +19,8 @@ function App() {
         <Route path="/education" element={<Education />} />
         <Route path="/project" element={<Project />} />
         <Route path="/internship" element={<Internship />} />
-        <Route path="/contact" element={<ContactMe />} />
+        <Route path="/contact-me" element={<ContactMe />} />
+        <Route path="*" element={<NotFound />} />
 
       </Routes>
     </>
