@@ -19,9 +19,16 @@ const LandingPage = () => {
 
     return (
         <>
-            {/* Desktop View */}
+            <HomeDesktop />
+            <HomeMobile/>
+        </>
+    )
+}
 
-            <div className='hover:cursor-crosshair hidden lg:flex lg:flex-col w-1/4 h-screen flex-col justify-end border-r bg-gradient-to-r from-slate-950 to-slate-900 text-white border-white xl:gap-10'>
+const HomeDesktop = () => {
+    return (
+        <>
+            <div className='hover:cursor-crosshair hidden lg:flex lg:flex-col w-1/4 h-screen flex-col justify-end border-r  text-white border-white xl:gap-10'>
                 <div className='w-3/4 mx-auto flex items-center justify-center h-20 transition-all hover:bg-slate-800/80'>
                     <p className=' text-center text-2xl  '>About me</p>
                 </div>
@@ -31,36 +38,18 @@ const LandingPage = () => {
                     <p className='text-2xl 2xl:text-4xl   uppercase'>Soejud</p>
                     <p className='text-2xl 2xl:text-4xl   uppercase'>Alkahfiardy</p>
                 </div>
-                {/* <hr className='w-3/4 mx-auto' />
-                <div className='w-full px-16'>
-                    <p className='w-full text-center   text-2xl'>About me</p>
-                    <div className='w-full my-10 flex-col gap-5 tracking-wider'>
-                        <div className='w-full flex'>
-                            <p className='w-1/4 text-lg'>Email :</p>
-                            <p className='w-3/4 text-lg'>ilhamyusuf386@gmail.com</p>
-                        </div>
-                        <div className='w-full flex'>
-                            <p className='w-1/4 text-lg'>Email :</p>
-                            <p className='w-3/4 text-lg'>ilhamyusuf386@gmail.com</p>
-                        </div>
-                        <div className='w-full flex'>
-                            <p className='w-1/4 text-lg'>Email :</p>
-                            <p className='w-3/4 text-lg'>ilhamyusuf386@gmail.com</p>
-                        </div>
-                    </div>
-                </div> */}
 
             </div>
-            <div className='hidden lg:block w-3/4 h-full bg-gradient-to-r from-slate-900 to-slate-950 selection:text-black selection:bg-white'>
+            <div className='hidden lg:block w-3/4 h-full selection:text-black selection:bg-white'>
                 <Link to="/project" className={`w-full h-[30vh] hover:backdrop-blur-sm hover:bg-slate-800/50 flex px-32 items-center hover:cursor-crosshair transition-all text-white`}>
                     <div className={`w-full text-2xl 2xl:text-4xl `}>PROJECTS</div>
                 </Link>
-                <div className={`w-full h-[30vh] border-t border-b border-white hover:backdrop-blur-sm hover:bg-slate-800/50 flex px-32 items-center hover:cursor-crosshair transition-all text-white`}>
+                <Link to="/internship" className={`w-full h-[30vh] border-t border-b border-white hover:backdrop-blur-sm hover:bg-slate-800/50 flex px-32 items-center hover:cursor-crosshair transition-all text-white`}>
                     <p className={`w-full text-2xl 2xl:text-4xl `}>INTERNSHIPS</p>
-                </div>
-                <div className={`w-full h-[30vh] hover:backdrop-blur-sm hover:bg-slate-800/50 flex px-32 items-center hover:cursor-crosshair transition-all text-white`}>
+                </Link>
+                <Link to="/education" className={`w-full h-[30vh] hover:backdrop-blur-sm hover:bg-slate-800/50 flex px-32 items-center hover:cursor-crosshair transition-all text-white`}>
                     <p className={`w-full text-2xl 2xl:text-4xl `}>EDUCATION</p>
-                </div>
+                </Link>
 
                 <div className='w-full h-[10vh] flex px-32  items-center border-t border-white justify-around'>
 
@@ -72,34 +61,36 @@ const LandingPage = () => {
                 </div>
 
             </div>
-
-            {/* Mobile View */}
-
-            <div className='min-h-screen lg:hidden w-full flex flex-col justify-between'>
-
-                <div className='w-full flex-col px-12 bg-gradient-to-r from-slate-950 to-slate-900 selection:bg-white'>
-                    <Link to="/project" className='w-full  h-[20vh]  flex items-center  '>
-                        <p className={`text-white rounded-md hover:text-right hover:bg-white hover:text-zinc-800 transition-all outline py-5 px-8 w-full text-3xl`}>PROJECTS</p>
-                    </Link>
-                    <div className='w-full  h-[20vh]  flex items-center  '>
-                        <p className={`text-white rounded-md hover:text-right hover:bg-white hover:text-zinc-800 transition-all outline py-5 px-8 w-full text-3xl`}>INTERNSHIPS</p>
-                    </div>
-                    <div className='w-full  h-[20vh]  flex items-center  '>
-                        <p className={`text-white rounded-md hover:text-right hover:bg-white hover:text-zinc-800 transition-all outline py-5 px-8 w-full text-3xl`}>EDUCATION</p>
-                    </div>
-                    <div className='w-full  h-[20vh]  flex items-center  '>
-                        <p className={`text-white rounded-md hover:text-right hover:bg-white hover:text-zinc-800 transition-all outline py-5 px-8 w-full text-3xl`}>CONTACT ME</p>
-                    </div>
-                </div>
-
-                <div className='w-full flex justify-evenly items-center h-full bg-gradient-to-r from-slate-950 to-slate-900'>
-                    <FaGithub onClick={() => clickSosmed('https://github.com/IlhamSoejudAlkahfiardy')} className='w-7 h-7 text-white hover:cursor-pointer hover:scale-125 ease-in-out duration-300'></FaGithub>
-                    <FaGitlab onClick={() => clickSosmed('https://gitlab.com/alkahfiardyIlhamSoejud')} className='w-7 h-7 text-white hover:cursor-pointer hover:scale-125 ease-in-out duration-300'></FaGitlab>
-                    <FaInstagram className='w-7 h-7 text-white hover:cursor-pointer hover:scale-125 ease-in-out duration-300'></FaInstagram>
-                    <FaLinkedin className='w-7 h-7 text-white hover:cursor-pointer hover:scale-125 ease-in-out duration-300'></FaLinkedin>
-                </div>
-            </div>
         </>
+    )
+}
+
+const HomeMobile = () => {
+    return (
+        <div className='min-h-screen lg:hidden w-full flex flex-col justify-between'>
+
+            <div className='w-full flex-col px-12 bg-gradient-to-r from-slate-950 to-slate-900 selection:bg-white'>
+                <Link to="/project" className='w-full  h-[20vh]  flex items-center  '>
+                    <p className={`text-slate-200 rounded-md hover:text-right hover:bg-white hover:text-zinc-800 transition-all border border-slate-200/50 py-5 px-8 w-full text-3xl`}>PROJECTS</p>
+                </Link>
+                <Link to="/internship" className='w-full  h-[20vh]  flex items-center  '>
+                    <p className={`text-slate-200 rounded-md hover:text-right hover:bg-white hover:text-zinc-800 transition-all border border-slate-200/50 py-5 px-8 w-full text-3xl`}>INTERNSHIPS</p>
+                </Link>
+                <Link to="/education" className='w-full  h-[20vh]  flex items-center  '>
+                    <p className={`text-slate-200 rounded-md hover:text-right hover:bg-white hover:text-zinc-800 transition-all border border-slate-200/50 py-5 px-8 w-full text-3xl`}>EDUCATION</p>
+                </Link>
+                <Link to="/contact-me" className='w-full  h-[20vh]  flex items-center  '>
+                    <p className={`text-slate-200 rounded-md hover:text-right hover:bg-white hover:text-zinc-800 transition-all border border-slate-200/50 py-5 px-8 w-full text-3xl`}>CONTACT ME</p>
+                </Link>
+            </div>
+
+            <div className='w-full flex justify-evenly items-center h-full bg-gradient-to-r from-slate-950 to-slate-900'>
+                <FaGithub onClick={() => clickSosmed('https://github.com/IlhamSoejudAlkahfiardy')} className='w-7 h-7 text-slate-200 hover:cursor-pointer hover:scale-125 ease-in-out duration-300'></FaGithub>
+                <FaGitlab onClick={() => clickSosmed('https://gitlab.com/alkahfiardyIlhamSoejud')} className='w-7 h-7 text-slate-200 hover:cursor-pointer hover:scale-125 ease-in-out duration-300'></FaGitlab>
+                <FaInstagram className='w-7 h-7 text-slate-200 hover:cursor-pointer hover:scale-125 ease-in-out duration-300'></FaInstagram>
+                <FaLinkedin className='w-7 h-7 text-slate-200 hover:cursor-pointer hover:scale-125 ease-in-out duration-300'></FaLinkedin>
+            </div>
+        </div>
     )
 }
 

@@ -4,7 +4,7 @@ const HamburgerMenu = ({ open, setOpen }) => {
     return (
         <button
             onClick={() => setOpen(!open)}
-            className={` z-20 focus:outline-none lg:hidden transition-all duration-500 ${open ? "ml-48 rotate-180" : "left-0 -rotate-0"} `}
+            className={`m-3 z-20 focus:outline-none lg:hidden transition-all duration-500 ${open ? "ml-48 rotate-180" : "left-0 -rotate-0"} `}
         >
             <svg
                 className="w-10 h-10 "
