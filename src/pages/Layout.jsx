@@ -17,8 +17,7 @@ const Layout = ({ children }) => {
 
                 {page != '/' ? (
 
-                    // <Footer />
-                    ''
+                    <Footer />
                 ) : ('')}
             </div>
 

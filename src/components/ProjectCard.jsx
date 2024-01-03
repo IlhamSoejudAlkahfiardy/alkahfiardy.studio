@@ -5,13 +5,13 @@ import { FaGithub } from 'react-icons/fa'
 import { RiTeamFill } from "react-icons/ri";
 
 const ProjectCard = (props) => {
-    
+
     const click = (e) => {
         window.open(e)
     }
     return (
         <div className='h-48 rounded-md'>
-            <div className='w-full h-full rounded-md backdrop-blur-md border border-slate-200/50 bg-slate-600/30 hover:bg-slate-700/30 transition-all duration-300 hover:cursor-pointer  shadow-slate-700 py-5 px-7 flex flex-col justify-between'>
+            <Link to={`/detail-project?project=${props.id}`} className='w-full h-full rounded-md backdrop-blur-md border border-slate-200/50 bg-slate-600/30 hover:bg-slate-700/30 transition-all duration-300 hover:cursor-pointer  shadow-slate-700 py-5 px-7 flex flex-col justify-between'>
                 <div className='w-full flex'>
                     <div className='w-1/5 flex items-center justify-start'>
                         <div className='w-12 h-auto aspect-square rounded-full' style={{ backgroundImage: `url(${props.image})`, backgroundPosition: 'center', backgroundSize: 'cover' }}>
@@ -39,7 +39,7 @@ const ProjectCard = (props) => {
                         <RiTeamFill className='w-5 h-5 text-slate-300' />
                     </div>
                 </div>
-            </div>
+            </Link>
         </div>
     )
 }
